@@ -25,7 +25,7 @@ if (crewStatus) { THIS IS ANOTHER WAY OF WRITING THE ABOVE STATEMENT BUT BOTH WA
 
 if (computerStatusCode === 200) { 
         console.log("Please stand by. Computer is rebooting");
-} else if (computerStatusCode === 400) {
+} else if  (computerStatusCode === 400) {
         console.log("Success! Computer online.");
 } else {
         console.log("ALERT: Computer offline!");
