@@ -3,6 +3,7 @@
 
 // Given the values for fuelLevel, crewStatus and computerStatus, should launchReady be true or false?
 // Is the program behaving as expected?
+//IF PROGRAM IS ONLY DEPENDANT ON CREWSTATUS AND COMPUTER STATUS LAUNCH OUTPUT WOULD BE EXPECTED RESULT BUT FUELLEVEL IS FALSE AND EXPECTED OUTPUT IS NOT CORRECT.
 
 let launchReady = false;
 let fuelLevel = 17000;
@@ -35,3 +36,4 @@ console.log("launchReady = ", launchReady);
 // } else {
 //    console.log('Launch scrubbed.');
 // }
+

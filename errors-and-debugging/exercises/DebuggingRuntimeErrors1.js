@@ -4,10 +4,12 @@
 let launchReady = false;
 let fuelLevel = 17000;
 
-if (fuellevel >= 20000) {
+if (fuelLevel >= 20000) {//lowercase instead of camel case?
    console.log('Fuel level cleared.');
    launchReady = true;
 } else {
    console.log('WARNING: Insufficient fuel!');
    launchReady = false;
 }
+
+//fuel level is not defined

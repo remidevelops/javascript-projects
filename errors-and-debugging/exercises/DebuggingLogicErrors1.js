@@ -30,3 +30,27 @@ if (launchReady) {
 } else {
    console.log('Launch scrubbed.');
 }
+
+//program runs no errors shown when running node DebuggingLogicErrors1.js
+//fuel lvl is lss than 20000 and launch ready is false
+//expected output 'launch scrubbed'
+//current output:
+   /*Fuel level cleared.
+10, 9, 8...
+Fed parrot...
+6, 5, 4...
+Ignition...
+3, 2, 1...
+Liftoff!
+*/
+
+/*  SOLUTION FROM TEXTBOOK TO COMPARE TO MY RESULTS
+The shuttle should not have launched. However, the messages to the console tell a different story. Without any changes, the original code outputs:
+
+  ```console
+  WARNING: Insufficient fuel!
+  Crew & computer cleared.
+  10, 9, 8, 7, 6, 5, 4, 3, 2, 1...
+  Liftoff!
+  ```
+  */
