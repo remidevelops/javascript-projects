@@ -1,5 +1,7 @@
 //We want to COMPLETELY reverse an array by flipping the order of the entries AND flipping the order of characters in each element.
 
+const { text } = require("stream/consumers");
+
 // Part One: Reverse Characters
 
 // 1. Define the function as reverseCharacters. Give it one parameter, which will be the string to reverse.
@@ -9,6 +11,36 @@
 // 5. Use console.log(reverseCharacters(myVariableName)); to call the function and verify that it correctly reverses the characters in the string.
 // 6. Optional: Use method chaining to reduce the lines of code within the function.
 
+
+/*function reverseCharacters(text) {
+    newText = text.split("");
+    newText.reverse();
+    newText = newText.join("");
+    return newText;
+}
+
+let textSample = "Dorea"
+console.log(reverseCharacters(textSample));*/
+
+let stringToReverse = "Tank";
+
+function reverseCharacters(str) {
+    let tmpArr = [];
+    if(typeof str === "string"){
+        tmpArr = str.split("");
+            tmpArr.reverse();
+            str = tmpArr.join("");
+    } else if (typeof str === "number") {
+        str = String(str);
+        str = reverseCharacters(str);
+    }
+        return str;
+    }
+
+
+    //return str.split("").reverse().join("");
+
+
 // Part Two: Reverse Digits
 
 // 1. Add an if statement to reverseCharacters to check the typeof the parameter.
@@ -16,6 +48,12 @@
 // 3. If typeof is ’number’, convert the parameter to a string, reverse the characters, then convert it back into a number.
 // 4. Return the reversed number.
 // 5. Be sure to print the result returned by the function to verify that your code works for both strings and numbers. Do this before moving on to the next exercise.
+
+
+
+
+
+
 
 // Part Three: Complete Reversal - Create a new function with one parameter, which is the array we want to change. The function should:
 
@@ -29,6 +67,26 @@
 let arrayTest1 = ['apple', 'potato', 'Capitalized Words'];
 let arrayTest2 = [123, 8897, 42, 1168, 8675309];
 let arrayTest3 = ['hello', 'world', 123, 'orange'];
+
+function reverseAll(arr) {
+
+    let tmpArr = [];//declare array
+
+    console.log(arr);//print parameter
+
+    for(let i = 0; i < arr.length; i++){//iterator i = 0 condition less than length and ++
+        tmpArr.push(reverseCharacters(arr[i]);)//pushes whatever in bracket to the array in reverse characters
+    }
+    console.log(tmpArr);
+    return tmpArr;
+}
+
+
+reverseAll(arrayTest1);
+reverseAll(arrayTest2);
+reverseAll(arrayTest3);
+
+
 
 // Bonus Missions
 
